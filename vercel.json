@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "name": "mini-llm-reasoner",
+  "buildCommand": "cd frontend && npm install && npm run build",
+  "outputDirectory": "frontend/dist",
+  "framework": "vite",
+  "builds": [
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build"
+    }
+  ],
+  "env": {
+    "VITE_API_BASE_URL": "@api_base_url"
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "frontend/dist/$1"
+    }
+  ]
+}
