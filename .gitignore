@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+.env
+.env.*
+!.env.example
+!backend/.env.example
+!frontend/.env.example
+*.log
+
+# PyTorch artifacts
+backend/app/models/artifacts/
+
+# Node
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# Editor
+.idea/
+.vscode/
+.DS_Store
